@@ -1,0 +1,28 @@
+body{
+    background-color: #EDF6E9;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 10% 20% 20% 20% 20%;
+}
+
+h1{
+    color: black;
+    text-align: center;
+}
+
+#poke {
+    grid-row-start: 1;
+}
+
+#pokemon{
+    color: black;
+}
+
+.day-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}

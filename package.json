@@ -1,0 +1,19 @@
+{
+  "name": "pokedate",
+  "version": "1.0.0",
+  "description": "A Simple day picker with pokemons",
+  "main": "main.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "run test"
+  },
+  "keywords": [
+    "pokemon",
+    "css",
+    "js",
+    "achezeta"
+  ],
+  "author": "AcheZeta",
+  "license": "MIT"
+}
