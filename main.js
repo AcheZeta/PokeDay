@@ -1,20 +1,40 @@
 const pokeday = document.getElementById('pokeday')
-const pokemonth = document.getElementById('month')
-const months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+const pokebithday = document.getElementById("date-pick");
+const clickbtn = document.getElementById("clickkk")
+let userIdPokemon = ''
 
-const printMonth = () => {
-    for (i = 0; i < months.length; i++) {
-        pokemonth.insertAdjacentHTML('beforeend', `<div id="pokeMonth">${months[i]}</div>`)
-    }
+const getUserId = () => {
+    let userBirthday = pokebithday.value
+    let parseDate = Date.parse(userBirthday)
+    let startOfYear = userBirthday.slice(0, 4) + '-01-01'
+    let parseStart = Date.parse(startOfYear)
+    //You can also use 86400000
+    let days = 1000 * 60 * 60 * 24
+    let diff = parseDate - parseStart
+    let numberOfDate = Math.ceil(diff / days)+1
+    userIdPokemon = numberOfDate
+    console.log(userIdPokemon)
+    getPokemon()
 }
-printMonth()
 
-fetch('https://pokeapi.co/api/v2/pokemon/?offset=0&limit=365')
-    .then(response => response.json())
-    .then(data => {
-        console.log(data)
-        const pokemon = data.results
-        pokemon.forEach(element => {
-            pokeday.insertAdjacentHTML('beforeend', `<div id="pokemon">${element.name}</div>`)
-        });
-    })
+function renderPokemon(pokemon) {
+    pokeday.innerHTML =
+    `<div class="card">
+    <img src="${pokemon.sprites.front_default}" alt="Avatar" style="width:100%">
+    <div class="info">
+      <h4><b>${pokemon.name}</b></h4> 
+      <p>${pokemon.id}</p> 
+    </div>
+  </div>`
+}
+
+clickbtn.addEventListener("click", getUserId)
+
+const getPokemon = () => {
+    fetch(`https://pokeapi.co/api/v2/pokemon/${userIdPokemon}/`)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+            renderPokemon(data)
+        })
+}
