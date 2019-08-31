@@ -2,7 +2,7 @@ body {
     background-color: #EDF6E9;
 }
 
-.container {
+.grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 }
@@ -12,3 +12,11 @@ h1 {
     text-align: center;
 }
 
+.pokeday {
+    grid-area: 1 / 2 / 4 / 5; 
+}
+
+.container{
+    grid-area: 1 / 2 / 4 / 5;
+    text-align: center;
+}
