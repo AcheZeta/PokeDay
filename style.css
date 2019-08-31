@@ -4,8 +4,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 10% 20% 20% 20% 20%;
+    grid-template-columns: repeat(5, 1fr);
 }
 
 h1 {
@@ -13,23 +12,3 @@ h1 {
     text-align: center;
 }
 
-#poke {
-    grid-row-start: 1;
-}
-
-#pokemon {
-    color: black;
-}
-
-.month {
-    grid-area: 1 / 1 / 2 / 8;
-    text-align: center;
-}
-
-.day-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    grid-column-gap: 5px;
-    grid-row-gap: 5px;
-}

@@ -11,14 +11,21 @@ const getUserId = () => {
     //You can also use 86400000
     let days = 1000 * 60 * 60 * 24
     let diff = parseDate - parseStart
-    let numberOfDate = Math.ceil(diff / days)
+    let numberOfDate = Math.ceil(diff / days)+1
     userIdPokemon = numberOfDate
     console.log(userIdPokemon)
     getPokemon()
 }
 
 function renderPokemon(pokemon) {
-    pokeday.innerHTML = pokemon.name
+    pokeday.innerHTML =
+    `<div class="card">
+    <img src="${pokemon.sprites.front_default}" alt="Avatar" style="width:100%">
+    <div class="info">
+      <h4><b>${pokemon.name}</b></h4> 
+      <p>${pokemon.id}</p> 
+    </div>
+  </div>`
 }
 
 clickbtn.addEventListener("click", getUserId)
