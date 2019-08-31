@@ -1,6 +1,6 @@
 const pokeday = document.getElementById('pokeday')
 const pokebithday = document.getElementById("date-pick");
-const clickbtn = document.getElementById("clickkk")
+const clickbtn = document.getElementById("search-btn")
 let userIdPokemon = ''
 
 const getUserId = () => {
