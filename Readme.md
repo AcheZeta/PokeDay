@@ -26,7 +26,7 @@ Conoce más sobre mi trabajo en el bootcamp de Laboratoria.
 - [LinkedIn](https://www.linkedin.com/in/hameyalli-elizalde/)
 - [Medium](https://medium.com/@AcheZeta)
 - [Twitter](https://twitter.com/ache_zeta)
-- o Invitame un café con [Paypal](paypal.me/Hameyalli)☕️ Jaja
+- o Invitame un café con [Paypal](https://www.paypal.me/Hameyalli)☕️
 
 
 ## Este proyecto fue realizado también gracias a: 🎁
