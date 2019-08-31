@@ -3,6 +3,7 @@ const pokebithday = document.getElementById("date-pick");
 const clickbtn = document.getElementById("search-btn")
 let userIdPokemon = ''
 
+//Get The user ID with parsing the Date.
 const getUserId = () => {
   let userBirthday = pokebithday.value
   let parseDate = Date.parse(userBirthday)
@@ -21,19 +22,22 @@ const getUserId = () => {
   }
 }
 
+//This function Show the card of the Pokemon
 function renderPokemon(pokemon) {
   pokeday.innerHTML =
     `<div class="card">
-    <img src="${pokemon.sprites.front_default}" alt="Avatar" style="width:100%">
+    <h3><b>${pokemon.name}</b></h3>  
+    <img src="${pokemon.sprites.front_default}" alt="Avatar" style="width:50%">
     <div class="info">
-      <h4><b>${pokemon.name}</b></h4> 
-      <p>${pokemon.id}</p> 
+    <p>${pokemon.id}</p>  
     </div>
   </div>`
 }
 
+//Button Fuction
 clickbtn.addEventListener("click", getUserId)
 
+//Get Data from API
 const getPokemon = () => {
   fetch(`https://pokeapi.co/api/v2/pokemon/${userIdPokemon}/`)
     .then(response => response.json())

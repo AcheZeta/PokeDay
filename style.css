@@ -34,6 +34,10 @@ input {
     text-align: center;
 }
 
+#mssg {
+   color: #3A506B; 
+   font-family: 'Roboto', sans-serif;
+}
 .container {
     font-family: 'Roboto', sans-serif;
     grid-area: 1 / 2 / 4 / 5;
