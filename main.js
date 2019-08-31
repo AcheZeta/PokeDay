@@ -17,6 +17,10 @@ const getUserId = () => {
     getPokemon()
 }
 
+function renderPokemon(pokemon) {
+    pokeday.innerHTML = pokemon.name
+}
+
 clickbtn.addEventListener("click", getUserId)
 
 const getPokemon = () => {
@@ -24,5 +28,6 @@ const getPokemon = () => {
         .then(response => response.json())
         .then(data => {
             console.log(data)
+            renderPokemon(data)
         })
 }
