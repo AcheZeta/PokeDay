@@ -57,7 +57,6 @@ const getPokemon = () => {
   //Example: pokemon/ditto/, pokemon/1/, type/3/ or ability/4/.
   fetch(`https://pokeapi.co/api/v2/pokemon/${userIdPokemon}/`)
     .then(response => response.json())
-    .catch(error => console.log(error))
     .then(data => {
       renderPokemon(data)
     })
