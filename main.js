@@ -5,7 +5,9 @@ let userIdPokemon = ''
 
 //Get The user ID with parsing the Date.
 const getUserId = () => {
+  //Get the Value from the input
   let userBirthday = pokebithday.value
+  // declare the start and end dates to subtract the user's birthday
   let parseDate = Date.parse(userBirthday)
   let startOfYear = userBirthday.slice(0, 4) + '-01-01'
   let parseStart = Date.parse(startOfYear)
@@ -14,6 +16,7 @@ const getUserId = () => {
   let diff = parseDate - parseStart
   let numberOfDate = Math.ceil(diff / days) + 1
   userIdPokemon = numberOfDate
+  //Detect if the date is empty
   if (userBirthday == null || userBirthday == '') {
     alert('Selecciona una fecha');
     return false;
