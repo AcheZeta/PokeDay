@@ -6,13 +6,13 @@ let userIdPokemon = ''
 //Get The user ID with parsing the Date.
 const getUserId = () => {
   let userBirthday = pokebithday.value
-  let parseDate = Date.parse(userBirthday)
-  let startOfYear = userBirthday.slice(0, 4) + '-01-01'
-  let parseStart = Date.parse(startOfYear)
+  const parseDate = Date.parse(userBirthday)
+  const startOfYear = userBirthday.slice(0, 4) + '-01-01'
+  const parseStart = Date.parse(startOfYear)
   //You can also use 86400000
-  let days = 1000 * 60 * 60 * 24
-  let diff = parseDate - parseStart
-  let numberOfDate = Math.ceil(diff / days) + 1
+  const days = 1000 * 60 * 60 * 24
+  const diff = parseDate - parseStart
+  const numberOfDate = Math.ceil(diff / days) + 1
   userIdPokemon = numberOfDate
   if (userBirthday == null || userBirthday == '') {
     alert('Selecciona una fecha');
