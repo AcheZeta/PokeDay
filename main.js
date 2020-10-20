@@ -6,22 +6,14 @@ let userBirthday = null
 
 //Get The user ID with parsing the Date.
 const getUserId = () => {
-  //Get the Value from the input
-  userBirthday = pokebithday.value
-  // use Date.parse() to convert a string representation of a date, and returns the number of milliseconds.
-  let parseDate = Date.parse(userBirthday)
-  //Slice the year from the input and set the fist day of Year. 
-  let startOfYear = userBirthday.slice(0, 4) + '-01-01'
-  //Parse the Fisrt day of Year with Date.parse()
-  let parseStart = Date.parse(startOfYear)
-  //Get the number of day convert the Milliseconds into Days using this formula: 1000 * 60 * 60 * 24
-  //I use 86400000 which are the seconds in 24 hours
-  let days = 86400000
-  //Get the difference between the first day of the year and the select date.
-  let diff = parseDate - parseStart
-  //Round up the number obtained from the division and add one
-  let numberOfDate = Math.ceil(diff / days) + 1
-  //Set the UserId as the result
+  let userBirthday = pokebithday.value
+  const parseDate = Date.parse(userBirthday)
+  const startOfYear = userBirthday.slice(0, 4) + '-01-01'
+  const parseStart = Date.parse(startOfYear)
+  //You can also use 86400000
+  const days = 1000 * 60 * 60 * 24
+  const diff = parseDate - parseStart
+  const numberOfDate = Math.ceil(diff / days) + 1
   userIdPokemon = numberOfDate
 }
 
