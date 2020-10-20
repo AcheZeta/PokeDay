@@ -1,6 +1,7 @@
 # Poke Date.
 
 Conoce cual es el pokemón que te corresponde segun tú fecha de cumpleaños.
+![pokedate](https://raw.githubusercontent.com/AcheZeta/PokeDay/master/src/Poke-Date.png)
 
 ## Info 🚀
 
@@ -25,7 +26,6 @@ Conoce más sobre mi trabajo en el bootcamp de Laboratoria.
 - [LinkedIn](https://www.linkedin.com/in/hameyalli-elizalde/)
 - [Medium](https://medium.com/@AcheZeta)
 - [Twitter](https://twitter.com/ache_zeta)
-
 
 ## Este proyecto fue realizado también gracias a: 🎁
 
