@@ -45,12 +45,18 @@ const renderPokemon = (pokemon) => {
     <h3>${pokemon.name}</h3>  <p>${pokemon.id}</p>
     <img src="${pokemon.sprites.front_default}" alt="Avatar">
     <div class="info">
-    <p> type: ${pokemon.types.map((poketype) => {
-    return `<ul>${poketype.type.name}</ul>`;
-  }).join("")}</p>
-  <p> Abilities: ${pokemon.abilities.map((pokebilitie) => {
-    return `<ul>${pokebilitie.ability.name}</ul>`;
-  }).join("")}</p>
+     <div class="detail-info">
+        <h4>type:</h4>
+          ${pokemon.types.map((poketype) => {
+          return `<div class="info-btn">${poketype.type.name}</div>`;
+          }).join("")}
+     </div>
+     <div class="detail-info">
+        <h4>Abilities:</h4>
+          ${pokemon.abilities.map((pokebilitie) => {
+          return `<div class="info-btn">${pokebilitie.ability.name}</div>`;
+          }).join("")}
+     </div>
     </div>
   </div>`
 }
