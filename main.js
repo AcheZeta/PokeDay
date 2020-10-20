@@ -71,6 +71,5 @@ const getPokemon = () => {
     .catch(error => console.log(error))
     .then(data => {
       renderPokemon(data)
-      console.log(data)
     })
 }
