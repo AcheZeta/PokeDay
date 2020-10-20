@@ -41,7 +41,7 @@ const renderPokemon = (pokemon) => {
   pokeday.innerHTML =
     `<div class="card">
     <h3><b>${pokemon.name}</b></h3>  
-    <img src="${pokemon.sprites.front_default}" alt="Avatar" style="width:50%">
+    <img src="${pokemon.sprites.front_default}" alt="Avatar" style="width:70%">
     <div class="info">
     <p>${pokemon.id}</p>
     </div>
