@@ -1,12 +1,12 @@
 body {
     background-color: #f4f2f3;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .container {
     font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
@@ -49,11 +49,12 @@ a.button {
     text-transform: uppercase;
     color: #f6f5f7;
     background-color: #08AECA;
-    box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
+    box-shadow: inset 0 -0.8em 0 -0.35em rgba(0, 0, 0, 0.17);
     text-align: center;
     border: 5px solid black;
     border-radius: 10px;
     width: 100%;
+    cursor: pointer;
 }
 
 .card {
@@ -77,10 +78,38 @@ a.button {
     text-transform: capitalize;
 }
 
+.detail-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .card .info ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+.p-info {
+    display: flex;
+}
+
+.info-btn {
+    padding: 2%;
+    margin: 2%;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+    text-transform: capitalize;
+    color: #212f45;
+    background-color: #d2d2ef;
+    box-shadow: inset 0 -1em 0 -0.35em rgba(0, 0, 0, 0.17);
+    text-align: center;
+    font-size: 18px;
+    width: 100%;
+    cursor: default;
+    border: 3px solid black;
+    border-radius: 5px;
+    border-bottom-right-radius: 20px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -98,13 +127,13 @@ a.button {
         padding: 1%;
         margin: 1%;
         font-size: 20px;
-        width: 20%;
+        width: 30%;
     }
 
     a.button {
         padding: 1%;
         margin: 1%;
-        width: 50%;
+        width: 30%;
     }
 
     .card {
@@ -112,7 +141,7 @@ a.button {
     }
 
     .card img {
-        width: 20%;
+        width: 90%;
     }
 
     .card h3 {
@@ -124,5 +153,9 @@ a.button {
     }
     .card .info {
        font-size: 20px;
+    }
+    .info-btn {
+        font-size: 15px;
+        padding: 10px;
     }
 }
