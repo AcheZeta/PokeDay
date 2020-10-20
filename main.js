@@ -42,10 +42,15 @@ const searchPoke = () => {
 const renderPokemon = (pokemon) => {
   pokeday.innerHTML =
     `<div class="card">
-    <h3><b>${pokemon.name}</b></h3>  
-    <img src="${pokemon.sprites.front_default}" alt="Avatar" style="width:70%">
+    <h3>${pokemon.name}</h3>  <p>${pokemon.id}</p>
+    <img src="${pokemon.sprites.front_default}" alt="Avatar">
     <div class="info">
-    <p>${pokemon.id}</p>
+    <p> type: ${pokemon.types.map((poketype) => {
+    return `<ul>${poketype.type.name}</ul>`;
+  }).join("")}</p>
+  <p> Abilities: ${pokemon.abilities.map((pokebilitie) => {
+    return `<ul>${pokebilitie.ability.name}</ul>`;
+  }).join("")}</p>
     </div>
   </div>`
 }
@@ -60,5 +65,6 @@ const getPokemon = () => {
     .catch(error => console.log(error))
     .then(data => {
       renderPokemon(data)
+      console.log(data)
     })
 }
